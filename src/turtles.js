@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Turtles extends Component{
-    render(){
-        const { turtles } = this.props;
-        const turtleList = turtles.map(turtle => {
-            return(
-                <div className="turtle" key={ turtle.id }>
+const Turtles = (props) => {
+    const { turtles } = props;
+    const turtleList = turtles.map(turtle => {
+        return(
+            <div className="turtle" key={ turtle.id }>
                     <div>Name: { turtle.name } </div>
                     <div>Mask: { turtle.mask } </div>
                 </div>
@@ -16,7 +15,6 @@ class Turtles extends Component{
                 { turtleList }
             </div>
         )
-    }
 }
 
 export default Turtles
